@@ -21,5 +21,4 @@ const mapped = helpers.mapArrayToObject([
 const flattened = helpers.mergeArrays(...[['how'], ['do'], ['you', 'do']]); // ['how', 'do', 'you' 'do']
 
 const singularize = helpers.singularize('MurderousParakeets'); // 'MurderousParakeet'
-
 ```
