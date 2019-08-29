@@ -16,7 +16,7 @@ const decorated = helpers.decorate(myHoc1, myHoc2, myHoc3)(MyComponent); // Deco
 const mapped = helpers.mapArrayToObject([
   { name: "Ryu", rank: 1 },
   { name: "Zangief", rank: "Too powerful to rank" },
-]); // { Ryu: { name, rank }, Zangief: { name, rank } }
+], 'name'); // { Ryu: { name, rank }, Zangief: { name, rank } }
 
 const flattened = helpers.mergeArrays(...[['how'], ['do'], ['you', 'do']]); // ['how', 'do', 'you' 'do']
 
