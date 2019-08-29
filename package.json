@@ -1,12 +1,12 @@
 {
   "name": "@brendanatme/js-helpers",
   "version": "0.0.1",
-  "description": "JS helper methods written in ES6 using JS modules",
+  "description": "JS helper methods",
   "main": "index.js",
   "scripts": {
     "prebuild": "npm run test",
     "build": "babel src -d dist",
-    "publish": "node ./scripts/publish.js",
+    "release": "node scripts/release.js",
     "test": "mocha --require @babel/register"
   },
   "repository": {

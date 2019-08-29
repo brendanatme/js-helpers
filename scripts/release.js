@@ -1,7 +1,7 @@
 /**
- * publish
+ * release
  * 
- * usage: `npm run publish [major|minor|patch]`
+ * usage: `npm run release [major|minor|patch]`
  */
 const { execSync } = require('child_process');
 
@@ -25,7 +25,7 @@ console.log('Copying .npmignore...');
 execSync(`cp .npmignore dist/.npmignore`, err => console.error(err));
 
 console.log('Publishing to NPM...');
-execSync(`cd dist; npm publish --access=public`, err => console.error(err));
+execSync(`npm publish dist --access=public`, err => console.error(err));
 
 console.log('Pushing to Git...');
 execSync(`git push`, err => console.error(err));
