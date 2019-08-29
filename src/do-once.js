@@ -9,10 +9,10 @@
 export const doOnce = (cb) => {
   let called = false;
 
-  return () => {
+  return (...args) => {
     if (!called) {
       called = true;
-      cb();
+      cb(...args);
     }
   };
 };
