@@ -23,6 +23,6 @@ const flattened = helpers.mergeArrays(...[['how'], ['do'], ['you', 'do']]); // [
 const singularize = helpers.singularize('MurderousParakeets'); // 'MurderousParakeet'
 
 let i = 0;
-const once = doOnce((n) => { i = i + n; });
+const once = helpers.doOnce((n) => { i = i + n; });
 [1, 2, 3].map((_i) => once(_i)); // i === 1
 ```
