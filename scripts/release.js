@@ -21,6 +21,9 @@ execSync(`npm version ${bump}`, err => console.error(err));
 console.log('Copying package.json...');
 execSync(`cp package.json dist/package.json`, err => console.error(err));
 
+console.log('Copying README.md...');
+execSync(`cp README.md dist/README.md`, err => console.error(err));
+
 console.log('Copying .npmignore...');
 execSync(`cp .npmignore dist/.npmignore`, err => console.error(err));
 
