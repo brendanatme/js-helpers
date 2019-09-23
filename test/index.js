@@ -1,23 +1,17 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { expect } from 'chai';
 import * as helpers from '../src';
 
+const fNames = fs
+  .readdirSync(path.resolve(__dirname, '..', 'src'))
+  .map((f) => helpers.camelCase(f.replace('.js', '')))
+  .filter((f) => f !== 'index');
+
 describe('index', () => {
-  it('exports "capitalize"', () => {
-    expect(helpers.capitalize).to.be.a('function');
-  });
-  it('exports "contains"', () => {
-    expect(helpers.contains).to.be.a('function');
-  });
-  it('exports "decorate"', () => {
-    expect(helpers.decorate).to.be.a('function');
-  });
-  it('exports "mapArrayToObject"', () => {
-    expect(helpers.mapArrayToObject).to.be.a('function');
-  });
-  it('exports "mergeArrays"', () => {
-    expect(helpers.mergeArrays).to.be.a('function');
-  });
-  it('exports "singularize"', () => {
-    expect(helpers.singularize).to.be.a('function');
+  fNames.map((fName) => {
+    it(`exports "${fName}"`, () => {
+      expect(helpers[fName]).to.be.a('function');
+    });
   });
 });

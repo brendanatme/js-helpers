@@ -1,4 +1,6 @@
+export { camelCase } from './camel-case';
 export { capitalize } from './capitalize';
+export { classCase } from './class-case';
 export { contains } from './contains';
 export { decorate } from './decorate';
 export { doOnce } from './do-once';
